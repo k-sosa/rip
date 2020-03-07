@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
- const Post = sequelize.define("User", {
+ const Post = sequelize.define("Post", {
      name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -48,7 +48,8 @@ module.exports = function(sequelize, DataTypes) {
     }
  });
     Post.associate = function(models) {
-        postMessage.belongsTo(models.User, {
+        models.Post.belongsTo(models.User, {
+            onDelete: "CASCADE",
             foreignKey: {
                 allowNull: false
             }

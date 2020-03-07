@@ -13,12 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-// app.use(express.static("public"));
+app.use(express.static("public"));
 // app.use(fileUpload());
 
 // Routes
 
-require("./routes/html-routes.js")(app);
+// require("./routes/html-routes.js")(app);
 require("./routes/user-api-routes.js")(app);
 require("./routes/post-api-routes.js")(app);
 
