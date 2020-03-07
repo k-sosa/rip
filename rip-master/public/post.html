@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+</head>
+<body>
+
+    <div class = "container" id="postBox">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Submit Content</h4>
+                </div>
+              <div class="card-body">
+    <div class="form-example">
+        <!-------------------- TITLE -->
+           <label for="exampleTitle">What is dead?</label>
+           <input type="deadThing" class="form-control" id="exampleTitle" placeholder="Place dead thing in this coffin">
+         </div>
+        <!-------------------- DESCRIPTION -->
+         <div class="form-group">
+           <label for="exampleDescription">Say something about the passed</label>
+           <input type="deadThing" class="form-control" id="exampleDescription" placeholder="Describe it">
+         </div>
+        <!-------------------- DATES -->
+         <div class="form-group">
+           <label for="Birthdate">When did it exist?</label>
+           <input type="deadThing" class="form-control" id="Birthdate" placeholder="Year of birth/creation">
+           <input type="deadThing" class="form-control" id="Deathdate" placeholder="Year of death">
+         </div>
+        <!-------------------- CATEGORY -->
+        <label for="Category">Category</label>
+        <select class="form-control" id="form-category">
+            <option>People</option>
+            <option>Fashion</option>
+            <option>Technology</option>
+            <option>Music</option>
+            <option>Memes</option>
+        </select>
+        <br>
+        <!-------------------- UPLOAD BUTTON -->
+         <form action="/action_page.php">
+           <input type="file" id="myFile" name="filename">
+           <input type="submit">
+         </form>
+         <br>
+        <!-------------------- SUBMIT BUTTON -->
+           <button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+    </div>   
+</div>
+</body>
+
+
+</html>
