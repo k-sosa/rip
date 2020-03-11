@@ -1,19 +1,21 @@
 $(document).ready(function() {
-const nameInput = $("name");
-const birthDayInput = $("birthday");
-const deathDayInput = $("deathday");
-const quoteInput = $("quote");
-const imageUpload = $("image");
-const categorySelected = $("category");
+const nameInput = $("#exampleTile");
+const birthDayInput = $("#birthdate");
+const deathDayInput = $("#deathdate");
+const quoteInput = $("#exampleDescription");
+const imageUpload = $("#myFile");
+const categorySelected = $("#form-category");
 let postId 
+
+$(cmsForm).on("submit", handleFormSubmit);
 
 function handleFormSubmit(event) {
     event.preventDefault();
-    // Wont submit the post if we are missing a body, title, or author
+    // Wont submit the post if we are missing a name, birthday, death day or quote
     if (!nameInput.val().trim() || !birthDayInput.val() || !deathDayInput.val() || !quoteInput.val().trim()) {
       return;
     }
-    // Constructing a newPost object to hand to the database
+    
     const newPost = {
       name: nameInput.val().trim(),
       birthDay: bodyInput.val().trim(),
