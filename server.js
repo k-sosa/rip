@@ -1,5 +1,5 @@
 const express = require("express");
-// const fileUpload = require("express-fileupload")
+const fileUpload = require("express-fileupload")
 // Sets up the Express App
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
-// app.use(fileUpload());
+app.use(fileUpload());
 
 // Routes
 
