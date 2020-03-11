@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <!---------------------------------------------------- SIDEBAR ------------------------ -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">User Page</a>
+        <a href="#">Post</a>
+        <a href="#">Death List</a>
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+    
+        <script>
+                function openNav() {
+                  document.getElementById("mySidebar").style.width = "250px";
+                  document.getElementById("main").style.marginLeft = "250px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidebar").style.width = "0";
+                  document.getElementById("main").style.marginLeft = "0";
+                }
+                </script>
+        <!---------------------------------------------- SIGN IN BUTTON -->
+    <button type="sign-in" class="btn btn-signin">Sign in</button>
+    <!------------header  -->
+    <h1>People</h1>
+<div class="d-flex justify-content-start">Flex box</div>
+<div class="d-flex justify-content-end">Flex box</div>
+<div class="d-flex justify-content-center">Flex box</div>
+<div class="d-flex justify-content-between">Flex box</div>
+<div class="d-flex justify-content-around">Flex box</div>
+</body>
+</html>

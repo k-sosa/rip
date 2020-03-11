@@ -589,7 +589,11 @@
     .sidebar a {font-size: 18px;}
   }
   /* -------------------------------------------------------SIDEBAR---------------------------------------- */
-      #postBox {
+  h1 {
+        text-align: center;
+  }
+  
+  #postBox {
         text-align: center;
         margin-top: 15px;
         }
@@ -605,11 +609,6 @@
             height: 450px;
             width: 300px;
             }
-
-      #peoplecardheader {
-        text-align: center;
-      }
-
       /* TECH CARD */
       #techcard {
         text-align: center;
@@ -617,42 +616,28 @@
         height: 450px;
         width: 300px;
         }
-
-    #techcardheader {
-    text-align: center;
-  }
-
       #techimg {
           height: 200px;
           width: 200px;
       }
-    /* QUOTE CARD */
+/* QUOTE CARD */
       #quotecard {
         text-align: center;
         margin-top: 15px;
         height: 450px;
         width: 300px;
         }
-
-    #quotecardheader {
-    text-align: center;
-  }
-
       #quoteimg {
           height: 200px;
           width: 200px;
       }
-      /* FASHION CARD */
+ /* FASHION CARD */
       #memecard {
         text-align: center;
         margin-top: 15px;
         height: 450px;
         width: 300px;
         }
-
-    #memecardheader {
-    text-align: center;
-  }
 
       #memeimg {
           height: 200px;
@@ -666,11 +651,24 @@
         width: 300px;
         }
 
-    #carcardheader {
-    text-align: center;
-  }
-
       #carimg {
           height: 200px;
           width: 200px;
       }
+/* RANDOM CARD */
+#randomcard {
+    text-align: center;
+    margin-top: 15px;
+    height: 450px;
+    width: 300px;
+    }
+
+
+  #randomimg {
+      height: 200px;
+      width: 200px;
+  }
+
+.card-header {
+    text-align: center;
+}
