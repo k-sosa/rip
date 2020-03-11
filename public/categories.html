@@ -95,55 +95,33 @@
     
                 </div>
 <!-- carousel---- -->
-                <div id="carouselslidefade" class="carouselpeeps" data-ride="carousel">
+                <div id="carouselslidefade" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active" data-interval="2">
                         <img src="Images/Billymays.jpg" class="d-block w-100" alt="...">
                       </div>
-                      <div class="carousel-item">
+                      <div class="carousel-item" data-interval="2">
                         <img src="Images/knuckles.jpg" class="d-block w-100" alt="...">
                       </div>
-                      <div class="carousel-item">
+                      <div class="carousel-item" data-interval="2">
                         <img src="Images/Mic.jpg" class="d-block w-100" alt="...">
                       </div>
                     </div>
-                    <!-- <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev"> -->
-                      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span> -->
-                    <!-- </a> -->
-                    <!-- <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"> -->
-                      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span> -->
-                    <!-- </a> -->
+                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
                   </div>
 
 
         </div>
     </div>
-
-    <!---------------------------------------------- PEOPLE CARD -->
-    <!-- <div class = "container" id="peoplecard">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal" id="peoplecardheader">People</h4>
-            </div>
-                <div class="card-body">
-    <img src="Images/Billymays.jpg" id="peopleimg" alt="Billy Mays">
-                </div>
-        </div>   
-    </div> -->
-    <!-- ---------------------------------------------TECH CARD -->
-    <!-- <div class = "container" id="techcard">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal" id="techcardheader">Technology</h4>
-            </div>
-                <div class="card-body">
-    <img src="Images/Floppydisk.jpg" id="techimg" alt="Floppy Disc">
-                </div>
-        </div>   
-    </div> -->
-      </div>
+</div>
+<!-- -------------------------NAVBAR SCRIPT ------------------------------------>
       <script>
     //   * Set the width of the sidebar to 250px and the left margin of the page content to 250px */
         function openNav() {
@@ -156,7 +134,6 @@
           document.getElementById("mySidebar").style.width = "0";
           document.getElementById("main").style.marginLeft = "0";
         }
-        ('.carousel').carousel();
         </script>
 </body>
 </html>
