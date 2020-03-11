@@ -25,11 +25,22 @@ $(document).ready(function() {
     function insertUser(userData) {
         const passOne = passwordInput.val().trim();
         const passTwo = passwordVerify.val().trim();
-        if (passOne === passTwo) {
-            $.post("/api/users", userData)
+        const UserName = userInput.val().trim();
+        const letters = /^[0-9a-zA-Z]+$/;
+        if (passOne !== passTwo) {
+            alert("Passwords do not match! Try again!")
+        }
+        else if (passOne.length >= 8 && passOne.length <= 20) {
+            alert("Password must be between 8 and 20 characters in length!")
+        }
+        else if (!passOne.val().match(letters)) {
+            alert("Password can only be letters and numbers!")
+        }
+        else if (!UserName.val().match(letters)) {
+            alert("Username can only be letters and numbers!")
         }
         else {
-            alert("Passwords do not match! Try again!")
+            $.post("/api/users", userData)
         }
     };
 });
