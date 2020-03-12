@@ -34,10 +34,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     image: {
         type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-            isUrl: true
-        }
+        allowNull: true
+       
     },
     category: {
         type: DataTypes.STRING,
@@ -47,13 +45,13 @@ module.exports = function(sequelize, DataTypes) {
         }
     }
  });
-    Post.associate = function(models) {
-        models.Post.belongsTo(models.User, {
-            onDelete: "CASCADE",
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+    // Post.associate = function(models) {
+    //     models.Post.belongsTo(models.User, {
+    //         onDelete: "CASCADE",
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     });
+    // };
     return Post;
 };

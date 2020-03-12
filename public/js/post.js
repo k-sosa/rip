@@ -7,10 +7,11 @@ const imageUpload = $("#myFile");
 const categorySelected = $("#form-category");
 let postId 
 
-$(cmsForm).on("submit", handleFormSubmit);
+$("#uploadForm").on("submit", handleFormSubmit);
 
 function handleFormSubmit(event) {
     event.preventDefault();
+    alert("you have uploaded")
     // Wont submit the post if we are missing a name, birthday, death day or quote
     if (!nameInput.val().trim() || !birthDayInput.val() || !deathDayInput.val() || !quoteInput.val().trim()) {
       return;
