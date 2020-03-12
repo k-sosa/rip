@@ -4,127 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body {
-        font-family: "Lato", sans-serif;
-    }
-
-    @media (min-width: 768px) {
-        .navbar-nav.navbar-center {
-            position: absolute;
-            left: 5%;
-            transform: translatex(-50%);
+    <title>Welcome Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: "MS Sans Serif", Tahoma, Verdana, Segoe, sans-serif;
+            background: teal;
+            color: white;
+            padding-bottom: 28px;
+            margin-top: 2%;
         }
-    }
-
-    nav .secondary-nav {
-        float: right;
-        margin-top: 30px;
-        margin-left: 30px;
-        padding-right: 15px;
-    }
-
-    /* 
-    .sidenav {
-        display: none;
-        height: 100%;
-        width: 250px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        padding-top: 60px;
-    }
-
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-    }
-
-    .sidenav a:hover {
-        color: #f1f1f1;
-    }
-
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-
-    @media screen and (max-height: 450px) {
-        .sidenav {
-            padding-top: 15px;
+        .container{
+            display:flex;
+            flex-wrap:wrap-reverse;
+        }
+        .butt {
+            padding: 20px;
+            margin: 10px;
         }
 
-        .sidenav a {
-            font-size: 18px;
+        .btn {
+            border-width: 2px;
+            border-style: outset;
+            border-color: buttonface;
+            border-right-color: #424242;
+            border-bottom-color: #424242;
+            background: silver;
+            color: black;
+
+            border-radius: 1px;
+            font-size: 15px;
+            font-weight: bold;
         }
-    } */
-</style>
+
+        .card-header {
+            background: -webkit-linear-gradient(left, #08216b, #a5cef7);
+            color: #fff;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-top: 2px;
+            padding-bottom: 1px;
+            text-align: left;
+        }
+
+        .card {
+            border: solid;
+            border-width: 2px;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+            width: 25%;
+        }
+        .cardMain {
+            text-align:center;
+            border: solid;
+            border-width: 2px;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+        }
+        #placeholderImage{
+            height:30%;
+            width:50%;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-default" role="navigation">
-
-        <div class="navbar-collapse collapse">
-
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="allposts.html"><span>ALL POSTS</span></a></li>
-                <li><a href="home.html"><span>HOME</span></a></li>
-                <li><a href="categories.html"><span>CATEGORIES</span></a></li>
-                <li><a href="post.html"><span>POST DEATH</span></a></li>
-
-            </ul>
-
-    </nav>
-    <h1>RIP</h1>
-    <div id="randPost">
-        <h1 id="name"> tempname </h1>
-        <h1 id="image">tempimage</h1>
-        <h2 id="birthDate">tempBirth</h2>
-        <h2 id="deathDate">tempDeath</h2>
-        <h3 id="quote">"quote"</h3>
-        <h4 id="user">-tempuser</h4>
-
-    </div>
-
-    <!-- 
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="post.html">Post Death</a>
-        <a href="categories.html">Categories</a>
-        <a href="allposts.html">Full Death List</a>
-
-    </div>
-    <container id="main">
-        <div id="textDiv" class="row">
-            <div class="col-sm-3">
-                <h2>R.I.P</h2>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h4>Navigation</h4>
             </div>
-            <div class="col-sm-9">
-            <p>Welcome to the graveyard</p>
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+            <div class="card-body">
+                <a class="btn text-center btn-lg btn-danger butt" href="home.html" style="width:65%"> HOME </a> <img
+                    src="images/dove.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger butt" href="post.html" style="width:65%"> POST </a> <img
+                    src="images/jesus.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger butt" href="allposts.html" style="width:65%"> ALL DEATHS
+                </a> <img src="images/skull.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger butt" href="categories.html" style="width:65%"> CATEGORIES
+                </a> <img src="images/rose.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger butt" href="signin.html" style="width:65%"> SIGN IN </a>
+                <img src="images/flame.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger butt" href="register.html" style="width:65%"> REGISTER </a>
+                <img src="images/pray.gif" width="50" height="50">
             </div>
         </div>
-    </container>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.display = "block";
-        }
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.display = "none";
-        }
-    </script> -->
+
+        <div class="card-body">
+            <div class="card-header">
+                <h4>We Hardly Knew Yee</h4>
+            </div>
+            <div class="card-body cardMain">
+               <h1> 
+                  <img src="images/headstone.png" width="50" height="50"> REST IN PEACE <img src="images/headstone.png" width="50" height="50">
+                </h1> 
+
+                <h1>
+                    BLINK-182
+                </h1>
+
+                <img src="images/Blink182.jpg" id="placeholderImage">
+        </br>
+                <h4> 1992 - 2005</h4>
+                <p id="quote">
+                    "Remember when they used to be good?"
+                </p> 
+                <p id="poster"> - Nobody</p>
+     
+            </div>
+        </div>
+    </div>
+    
+
 
 </body>
 
