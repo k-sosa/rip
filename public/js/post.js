@@ -5,7 +5,7 @@ const deathDayInput = $("#deathdate");
 const quoteInput = $("#exampleDescription");
 const imageUpload = $("#myFile");
 const categorySelected = $("#form-category");
-let postId 
+
 
 $("#uploadForm").on("submit", handleFormSubmit);
 
@@ -34,7 +34,7 @@ function handleFormSubmit(event) {
   function submitPost(post) {
     $.post("/api/posts", post, function(object1) {
       window.location.href = "/allposts";
-      console.log("whatever")
+      
     });
   }
 

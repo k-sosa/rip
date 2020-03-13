@@ -8,10 +8,96 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
+<style>
+
+        .container2{
+            display:flex;
+            flex-wrap:wrap-reverse;
+        }
+        .butt {
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .btn {
+            border-width: 2px;
+            border-style: outset;
+            border-color: buttonface;
+            border-right-color: #424242;
+            border-bottom-color: #424242;
+            background: silver;
+            color: black;
+            border-radius: 1px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .card-header2 {
+            background: -webkit-linear-gradient(left, #08216b, #a5cef7);
+            color: #fff;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-top: 2px;
+            padding-bottom: 1px;
+            text-align: left;
+        }
+
+        .c2{
+            border: solid;
+            border-width: 2px;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+            width: 25%;
+        }
+        .cardMain {
+            text-align:center;
+            border: solid;
+            border-width: 2px;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+        }
+</style>
+
 <body>
     <br>
+    <div class="container2">
+      <div class="card c2">
+          <div class="card-header2">
+              <h4>Navigation</h4>
+          </div>
+          <div class="card-body">
+              <a class="btn text-center btn-lg btn-danger butt" href="home.html" style="width:65%"> HOME </a> <img
+                  src="images/dove.gif" width="50" height="50">
+              </br>
+              <a class="btn text-center btn-lg btn-danger butt" href="post.html" style="width:65%"> POST </a> <img
+                  src="images/jesus.gif" width="50" height="50">
+              </br>
+              <a class="btn text-center btn-lg btn-danger butt" href="allposts.html" style="width:65%"> ALL DEATHS
+              </a> <img src="images/skull.gif" width="50" height="50">
+              </br>
+              <a class="btn text-center btn-lg btn-danger butt" href="categories.html" style="width:65%"> CATEGORIES
+              </a> <img src="images/rose.gif" width="50" height="50">
+              </br>
+              <a class="btn text-center btn-lg btn-danger butt" href="signin.html" style="width:65%"> SIGN IN </a>
+              <img src="images/flame.gif" width="50" height="50">
+              </br>
+              <a class="btn text-center btn-lg btn-danger butt" href="register.html" style="width:65%"> REGISTER </a>
+              <img src="images/pray.gif" width="50" height="50">
+          </div>
+      </div>
+
 <!-------------------------------------------------------------------------- SIDEBAR --------------------------------------->
-    <div id="mySidebar" class="sidebar">
+    <!-- <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="/home.html">Home</a>
         <a href="/categories.html">Categories</a>
@@ -21,7 +107,7 @@
       </div>
       
       <div id="main">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <button class="openbtn" onclick="openNav()">&#9776;</button> -->
 <!--------------------------------------------------------------------------------SIGN IN BOX----------------------------------  -->
     <div class="container" id="signinbox">
         <div class="card mb-4">
@@ -41,13 +127,13 @@
       
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
-          
+    </form>
           <button type="submit" class="registerbtn">Sign in</button>
         </div>
         <br>
     </div>
     <!------------------------------------------------------------------------- SCRIPT SIDEBAR ------------------------------------------>
-    <script>
+    <!-- <script>
         //   * Set the width of the sidebar to 250px and the left margin of the page content to 250px */
             function openNav() {
               document.getElementById("mySidebar").style.width = "250px";
@@ -61,5 +147,5 @@
             }
             ('.carousel').carousel();
             </script>
-</body>
+</body> -->
 </html>
