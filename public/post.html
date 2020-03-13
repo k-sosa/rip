@@ -18,10 +18,16 @@
     <a href="post.html">Post</a>
     <a href="allposts.html">Death List</a>
   </div>
+
   
+
   <div id="main">
     <button class="openbtn" onclick="openNav()">&#9776;</button>
-<!---------------------------------------------------------------------------------------- POST FORM --------------------------------------------------------------->
+    <form ref='uploadForm'   id='uploadForm' 
+    action='http://localhost:8080/allposts' 
+    method='post' 
+    encType="multipart/form-data">
+    <!---------------------------------------------------------------------------------------- POST FORM --------------------------------------------------------------->
 <!-- <button type="sign-in" class="btn btn-signin">Sign in</button> -->
     <div class = "container" id="postBox">
         <div class="card mb-4">
@@ -33,22 +39,22 @@
     <div class="form-example">
         <!-------------------- TITLE -->
            <label for="exampleTitle">What is dead?</label>
-           <input type="deadThing" class="form-control" id="exampleTitle" placeholder="Place dead thing in this coffin">
+           <input type="text" class="form-control" name="name" placeholder="Place dead thing in this coffin">
          </div>
         <!-------------------- DESCRIPTION -->
          <div class="form-group">
            <label for="exampleDescription">Say something about the passed</label>
-           <input type="deadThing" class="form-control" id="exampleDescription" placeholder="Describe it">
+           <input type="text" class="form-control" name="quote" placeholder="Describe it">
          </div>
         <!-------------------- DATES -->
          <div class="form-group">
            <label for="Birthdate">When did it exist?</label>
-           <input type="deadThing" class="form-control" id="Birthdate" placeholder="Year of birth/creation">
-           <input type="deadThing" class="form-control" id="Deathdate" placeholder="Year of death">
+           <input type="text" class="form-control" name="birthdate" placeholder="Year of birth/creation">
+           <input type="text" class="form-control" name="deathdate" placeholder="Year of death">
          </div>
         <!-------------------- CATEGORY -->
         <label for="Category">Category</label>
-        <select class="form-control" id="form-category">
+        <select class="form-control" name="category">
             <option>People</option>
             <option>Fashion</option>
             <option>Technology</option>
@@ -57,15 +63,17 @@
         </select>
         <br>
         <!-------------------- UPLOAD BUTTON -->
-         <form action="/action_page.php">
-           <input type="file" id="myFile" name="filename">
-           <input type="submit">
-         </form>
+  
+      
+          <input type="file" name="sampleFile" />
+          
          <br>
-    </form>
+    
         <!-------------------- SUBMIT BUTTON -->
            <button type="submit" class="btn btn-primary">Submit</button>
-       </div>
+      
+          </form>   
+          </div>
     </div>   
 </div>
 </div>
