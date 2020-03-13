@@ -7,16 +7,16 @@ module.exports = function (app) {
       res.json(dbUser);
     });
   });
-  app.post("/api/posts", function (req, res) {
-    db.Post.create(req.body).then(function (dbPost) {
+  // app.post("/api/posts", function (req, res) {
+  //   db.Post.create(req.body).then(function (dbPost) {
 
 
-      res.json(dbPost)
+  //     res.json(dbPost)
 
-    });
-  });
+  //   });
+  // });
 
-  app.post('/posts', function (req, res) {
+  app.post('/allposts', function (req, res) {
     req.body.UserId = 1
     req.body.image = "/image1.png"
     console.log("req.body", req.body)
@@ -40,9 +40,16 @@ module.exports = function (app) {
             id: results.id
           }
         })
-        res.json({ name: req.body.name, quote: req.body.quote, birthdate: req.body.birthdate, deathdate: req.body.deathdat, category: req.body.category, UserId: req.body.UserId, image: req.body.image, image: results.id });
+        res.json({ name: req.body.name, quote: req.body.quote, birthdate: req.body.birthdate, deathdate: req.body.deathdate, category: req.body.category, UserId: req.body.UserId, image: req.body.image, image: results.id });
+        
       });
     })
 
+  });
+
+  app.get("/api/allposts", function (req, res) {
+    db.Post.findAll({}).then(function (postObject) {
+      res.json(postObject);
+    });
   });
 };
