@@ -32,7 +32,7 @@ function handleFormSubmit(event) {
   }
 
   function submitPost(post) {
-    $.post("/api/posts", post, function() {
+    $.post("/api/posts", post, function(object1) {
       window.location.href = "/allposts";
     });
   }
