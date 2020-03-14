@@ -1,44 +1,26 @@
-$(document).ready(function() {
-const nameInput = $("#exampleTile");
-const birthDayInput = $("#birthdate");
-const deathDayInput = $("#deathdate");
-const quoteInput = $("#exampleDescription");
-const imageUpload = $("#myFile");
-const categorySelected = $("#form-category");
-let postId 
+function myFunction() {
 
-$("#uploadForm").on("submit", handleFormSubmit);
+  const Name = $('#searchBar').val().trim();
 
-function handleFormSubmit(event) {
-    event.preventDefault();
-    alert("you have uploaded")
-    // Wont submit the post if we are missing a name, birthday, death day or quote
-    if (!nameInput.val().trim() || !birthDayInput.val() || !deathDayInput.val() || !quoteInput.val().trim()) {
-      return;
-    }
+
     
-    const newPost = {
-      name: nameInput.val().trim(),
-      birthDay: bodyInput.val().trim(),
-      deathDay: deathDayInput.val().trim(),
-      quote: quoteInput.val().trim(),
-      image: imageUpload,
-      category: categorySelected
+  $.ajax({
+      url: "https://public.opendatasoft.com/api/records/1.0/search/?dataset=namus-missings&q="+Name+"&facet=cityoflastcontact&facet=countydisplaynameoflastcontact&facet=raceethnicity&facet=statedisplaynameoflastcontact&facet=gender",
+      method: "GET"
+      
+  }).then(function (response) {
+      
+      const record1 = response.records[0]
+      const record2 = response.records[0].fields.cityoflastcontact
+      const record3 = response.records[0].fields.currentagefrom
 
-    };
+      console.log(record1)
+      console.log("where they were last seen " + record2)
+      console.log("their current age " + record3)
 
-      submitPost(newPost);
-    
-  }
+      
+      
 
-  function submitPost(post) {
-    $.post("/api/posts", post, function(object1) {
-      window.location.href = "/allposts";
-    });
-  }
+  });
 
-
-
-})
-
-
+};

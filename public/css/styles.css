@@ -1,4 +1,4 @@
-    
+   
     /* ALL CSS IN THIS TOP PORTION IS FOR THE WINDOWS LOOK, DO NOT CHANGE IT! */
     /* CSS FOR THE PROJECT IS AT THE BOTTOM. line 530 */
 
@@ -675,3 +675,20 @@
 .card-header {
     text-align: center;
 }
+.games{
+    width: 72%;
+    height: 1%;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 13%;
+    position: relative;
+}
+.movies{
+    width: 70%;
+    height: 1%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 14%;
+    position: relative;
+}
+
