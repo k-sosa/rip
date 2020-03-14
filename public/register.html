@@ -6,70 +6,89 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="css/navbar.css"> -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+
 </head>
+<style>
+    .container2 {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .button {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .btn {
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+    background: silver;
+    color: black;
+    border-radius: 1px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .card-header2 {
+    background: -webkit-linear-gradient(left, #08216b, #a5cef7);
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    text-align: left;
+  }
+ .cardMain {
+    text-align: center;
+    border: solid;
+    border-width: 2px;
+    border-bottom-color: #424242;
+    border-right-color: #424242;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    background: silver;
+    color: #212529;
+  }
+</style>
 <body>
-    <br>
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/home.html">Home</a>
-        <a href="/categories.html">Categories</a>
-        <a href="#">User Page</a>
-        <a href="/post.html">Post</a>
-        <a href="/allposts.html">Death List</a>
-      </div>
-      
-      <div id="main">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-<!----------------- CONTAINER -->
-    <div class="container" id="signinbox">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Sign up</h4>
-                </div>
-              <div class="card-body">
-    </div>
 <!----------------- FORM -->
-    <form id="user-form">
-        <div class="container">
-          <h1>Dont Fear The Reaper Sign up</h1>
-          <p>Sign up to use this forum</p>
-          <hr>
-          <!----------------- USERNAME -->
+  <form action="/action_page.php">
+      <div class="container">
+        <h1>End Of The Internet Registration</h1>
+        <p>Sign up to use this forum</p>
+        <hr>
+        <!----------------- USERNAME -->
 
-          <label for="email"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="username" id="user-name" required>
-          <!----------------- PASSWORDS -->
+        <label for="email"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="user-name" required>
+        <!----------------- PASSWORDS -->
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="password-input" required>
-      
-          <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="password-verify" required>
-          <hr>
-      
-          <!----------------- SUBMIT BUTTON -->
-          <button type="submit" class="registerbtn">Register</button>
-        </form>
-        </div>
-        <br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="password-input" required>
+    
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="password-verify" required>
+        <hr>
+    </form>
+        <!----------------- SUBMIT BUTTON -->
+        <button type="submit" class="btn btn-primary registerbtn">Register</button>
+        <a href="home.html"><button class="btn btn-primary">Go Home</button></a>
+
+      </div>
+      <br>
     </div>
-    <script src="./js/register.js" type="text/javascript"></script>
-        <!-------------------------------------------------------------- SCRIPT FOR NAVBAR ------------------------------------------->
-        <script>
-            //   * Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-                function openNav() {
-                  document.getElementById("mySidebar").style.width = "250px";
-                  document.getElementById("main").style.marginLeft = "250px";
-                }
-                
-                /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-                function closeNav() {
-                  document.getElementById("mySidebar").style.width = "0";
-                  document.getElementById("main").style.marginLeft = "0";
-                }
-                // ('.carousel').carousel();
-                </script>
+  </div>
+  <a href="http://www.freelimewiredownload.net/"><img src="images/ads/movies.jpg" class="movies center"></a>
+  <script src="script/script.js"></script>
+  <script src="./js/register.js" type="text/javascript"></script>
+
 </body>
 </html>
