@@ -1,9 +1,9 @@
 const express = require("express");
-const fileUpload = require("express-fileupload")
 // Sets up the Express App
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
 
 // Requiring our models for syncing
 const db = require("./models");
@@ -14,7 +14,6 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
-app.use(fileUpload());
 
 // Routes
 

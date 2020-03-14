@@ -8,11 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
 
 </head>
 
 <body>
+<h4 id="local-user" class="btn butt"> </h4>
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -25,11 +26,19 @@
                 <a class="btn text-center btn-lg btn-danger button" href="post.html" style="width:67%"> POST </a> <img
                     src="images/jesus.gif" width="50" height="50">
                 </br>
-                <a class="btn text-center btn-lg btn-danger button" href="allposts.html" style="width:67%"> ALL DEATHS
+                <a class="btn text-center btn-lg btn-danger button" href="allposts.html" style="width:67%"> SEARCH MISSING
                 </a> <img src="images/skull.gif" width="50" height="50">
                 </br>
                 <a class="btn text-center btn-lg btn-danger button" href="categories.html" style="width:67%"> CATEGORIES
                 </a> <img src="images/rose.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="chatroom.html" style="width:67%"> CHATROOM
+                </a>
+                <img src="images/aol.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" onclick='changeBackground()' type="button"
+                    style="width:67%"> BACKGROUND </a>
+                <img src="images/bart.gif" width="50" height="50">
                 </br>
                 <a class="btn text-center btn-lg btn-danger button" href="signin.html" style="width:67%"> SIGN IN </a>
                 <img src="images/flame.gif" width="50" height="50">
@@ -37,10 +46,6 @@
                 <a class="btn text-center btn-lg btn-danger button" href="register.html" style="width:67%"> REGISTER
                 </a>
                 <img src="images/pray.gif" width="50" height="50">
-                </br>
-                <a class="btn text-center btn-lg btn-danger button" onclick='changeBackground()' type="button"
-                    style="width:67%"> BACKGROUND </a>
-                <img src="images/bart.gif" width="50" height="50">
             </div>
         </div>
 
@@ -49,55 +54,30 @@
             <div class="card-header">
                 <h4>HELP US FIND THEM or PUT THEM TO REST</h4>
             </div>
+            <div class="card-body cardMain">
+            <h3> <img src="images/mag.gif" width="50" height="50">Look Up The Missing's Name<img src="images/mag.gif" width="50" height="50"></h3>
             <input id="searchBar" type="text">
-            <button onclick="myFunction()"></button>
+            <button onclick="myFunction()" class=" btn text-center btn-md btn-danger butt">Search</button>
 
             <div id="search-div">
 
             </div>
+            <h4><a href="chatroom.html"><img src="images/aol.gif" width="50" height="50">CHAT ABOUT THE MISSING <img src="images/aol.gif" width="50" height="50"></a></h4>
 
-            
         </div>
 
-        
+
         <div>
-            <h4 id="local-user"></h4>
-        </div>
+            
+        </div></div>
     </div>
     <script src="script/script.js">
 
     </script>
     <script>
         document.getElementById("local-user").innerHTML = "Welcome " + localStorage.username + "!";
-        function myFunction() {
-
-         const Name = $('#searchBar').val().trim();
 
 
-  
-$.ajax({
-    url: "https://public.opendatasoft.com/api/records/1.0/search/?dataset=namus-missings&q="+Name+"&facet=cityoflastcontact&facet=countydisplaynameoflastcontact&facet=raceethnicity&facet=statedisplaynameoflastcontact&facet=gender",
-    method: "GET"
-    
-}).then(function (response) {
-    
-    const record1 = response.records[0]
-    const record2 = response.records[0].fields.cityoflastcontact
-    const record3 = response.records[0].fields.currentagefrom
-
-    console.log(record1)
-    console.log("where they were last seen " + record2)
-    console.log("their current age " + record3)
-
-   
-    $("#search-div").append('They were last seen in ' +record2 + ' and their current age should be ' + record3 + ' Chat with others who are hoping to find someone.');
-
-    
-    
-
-});
-
-};
     </script>
 </body>
 

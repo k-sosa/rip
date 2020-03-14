@@ -1,139 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+
 </head>
+
 <body>
-<!---------------------------------------------------- SIDEBAR ------------------------ -->
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="home.html">Home</a>
-        <a href="categories.html">Categories</a>
-        <a href="#">User Page</a>
-        <a href="post.html">Post</a>
-        <a href="allposts.html">Death List</a>
-      </div>
-      
-      <div id="main">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-        <!---------------------------------------------- SIGN IN BUTTON -->
-    <button type="sign-in" onclick="window.location.href='/signin.html'" class="btn btn-signin">Sign in</button>
-    <div>
-    <h1>Categories</h1>
-    <p>Take a trip through time with some of our categories.</p>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h4>Navigation</h4>
+            </div>
+            <div class="card-body">
+                <a class="btn text-center btn-lg btn-danger button" href="home.html" style="width:67%"> HOME </a> <img
+                    src="images/dove.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="post.html" style="width:67%"> POST </a> <img
+                    src="images/jesus.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="allposts.html" style="width:67%"> SEARCH MISSING
+                </a> <img src="images/skull.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="categories.html" style="width:67%"> CATEGORIES
+                </a> <img src="images/rose.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="chatroom.html" style="width:67%"> CHATROOM
+                </a>
+                <img src="images/aol.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" onclick='changeBackground()' type="button"
+                    style="width:67%"> BACKGROUND </a>
+                <img src="images/bart.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="signin.html" style="width:67%"> SIGN IN </a>
+                <img src="images/flame.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="register.html" style="width:67%"> REGISTER
+                </a>
+                <img src="images/pray.gif" width="50" height="50">
+            </div>
+        </div>
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <div class = "container" id="peoplecard">
+                <div class="container" id="peoplecard">
                     <div class="card mb-4">
                         <div class="card-header">
                             <h4 class="my-0 font-weight-normal" id="peoplecardheader">People</h4>
                         </div>
-                            <div class="card-body">
-                <img src="Images/Billymays.jpg" id="peopleimg" alt="Billy Mays">
-                            </div>
-                    </div>   
+                        <div class="card-body">
+                            <img src="Images/Billymays.jpg" id="peopleimg" alt="Billy Mays">
+                        </div>
+                    </div>
                 </div>
 
             </div>
             <div class="col-sm-3">
-                <div class = "container" id="techcard">
+                <div class="container" id="techcard">
                     <div class="card mb-4">
                         <div class="card-header">
                             <h4 class="my-0 font-weight-normal" id="techcardheader">Technology</h4>
                         </div>
-                            <div class="card-body">
-                <img src="Images/Floppydisk.jpg" id="techimg" alt="Floppy Disc">
-                            </div>
-                    </div>   
+                        <div class="card-body">
+                            <img src="Images/Floppydisk.jpg" id="techimg" alt="Floppy Disc">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="col-sm-3">
-                <div class = "container" id="quotecard">
+                <div class="container" id="quotecard">
                     <div class="card mb-4">
                         <div class="card-header">
                             <h4 class="my-0 font-weight-normal" id="quotecardheader">Quotes/Phrases</h4>
                         </div>
-                            <div class="card-body">
-                <img src="Images/Mic.jpg" id="quoteimg" alt="Mic">
-                            </div>
-                    </div>   
+                        <div class="card-body">
+                            <img src="Images/Mic.jpg" id="quoteimg" alt="Mic">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class = "container" id="memecard">
+                    <div class="container" id="memecard">
                         <div class="card mb-4">
                             <div class="card-header">
                                 <h4 class="my-0 font-weight-normal" id="memecardheader">Memes</h4>
                             </div>
-                                <div class="card-body">
-                    <img src="Images/knuckles.jpg" id="memeimg" alt="ugandank">
-                                </div>
-                        </div>   
+                            <div class="card-body">
+                                <img src="Images/knuckles.jpg" id="memeimg" alt="ugandank">
+                            </div>
+                        </div>
                     </div>
-    
+
                 </div>
                 <div class="col-sm-3">
-                    <div class = "container" id="carcard">
+                    <div class="container" id="carcard">
                         <div class="card mb-4">
                             <div class="card-header">
                                 <h4 class="my-0 font-weight-normal" id="carcardheader">Cars</h4>
                             </div>
-                                <div class="card-body">
-                    <img src="Images/pontiac.jpg" id="carimg" alt="ugandank">
-                                </div>
-                        </div>   
+                            <div class="card-body">
+                                <img src="Images/pontiac.jpg" id="carimg" alt="ugandank">
+                            </div>
+                        </div>
                     </div>
-    
+
                 </div>
-<!-- carousel---- -->
-                <div id="carouselslidefade" class="carousel slide carousel-fade" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-interval="2">
-                        <img src="Images/Billymays.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item" data-interval="2">
-                        <img src="Images/knuckles.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item" data-interval="2">
-                        <img src="Images/Mic.jpg" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                  </div>
 
 
+
+            </div>
         </div>
     </div>
-</div>
-<!-- -------------------------NAVBAR SCRIPT ------------------------------------>
-      <script src="script/script.js">
+    <!-- -------------------------NAVBAR SCRIPT ------------------------------------>
+    <script src="script/script.js">
     //   * Set the width of the sidebar to 250px and the left margin of the page content to 250px */
         // function openNav() {
         //   document.getElementById("mySidebar").style.width = "250px";
         //   document.getElementById("main").style.marginLeft = "250px";
         // }
-        
+
         // /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
         // function closeNav() {
         //   document.getElementById("mySidebar").style.width = "0";
         //   document.getElementById("main").style.marginLeft = "0";
         // }
-        </script>
+    </script>
 </body>
+
 </html>
