@@ -6,7 +6,7 @@ module.exports = function(app) {
   
     
     app.get("/", function(req, res) {
-      res.sendFile(path.join(__dirname, "../public/home.html"));
+      res.sendFile(path.join(__dirname, "../public/welcome.html"));
     });
   
     app.get("/allposts", function(req, res) {
@@ -25,8 +25,8 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/categories.html"));
     });
 
-    app.get("/welcome", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/welcome.html"));
+    app.get("/home", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 
 
