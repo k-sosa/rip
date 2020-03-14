@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>End Of The Internet</title>
+    <script defer src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <script defer src="scriptChat.js"></script>
+</head>
+<style>
+    body {
+        font-family: "MS Sans Serif", Tahoma, Verdana, Segoe, sans-serif;
+        background: teal;
+        color: white;
+        padding-bottom: 28px;
+        /* margin-top: 1%; */
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .button {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .butt2 {
+        /* padding: px;
+            margin: 10px; */
+    }
+
+    .btn {
+        border-width: 2px;
+        border-style: outset;
+        border-color: buttonface;
+        border-right-color: #424242;
+        border-bottom-color: #424242;
+        background: silver;
+        color: black;
+
+        border-radius: 1px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .card-header {
+        background: -webkit-linear-gradient(left, #08216b, #a5cef7);
+        color: #fff;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-top: 2px;
+        padding-bottom: 1px;
+        text-align: left;
+    }
+
+    .card {
+        border: solid;
+        border-width: 2px;
+        border-bottom-color: #424242;
+        border-right-color: #424242;
+        border-left-color: #fff;
+        border-top-color: #fff;
+        background: silver;
+        color: #212529;
+        width: 25%;
+    }
+
+    .cardMain {
+        text-align: center;
+        border: solid;
+        border-width: 2px;
+        border-bottom-color: #424242;
+        border-right-color: #424242;
+        border-left-color: #fff;
+        border-top-color: #fff;
+        background: silver;
+        color: #212529;
+    }
+
+    #placeholderImage {
+        height: 30%;
+        width: 50%;
+    }
+
+    .cheats {
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        width: 72%;
+        height: 10%;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        margin-left: 13%;
+        position: relative;
+
+    }
+</style>
+
+<body>
+    <a href="http://www.freelimewiredownload.net/"><img src="images/ads/limewiread.png" class="cheats center"></a>
+
+
+    <div class="container">
+        <!-- <img src="ads/visitor (2).png" class="visi"> -->
+        <div class="card">
+            <div class="card-header">
+                <h4>Navigation</h4>
+            </div>
+            <div class="card-body">
+                <a class="btn text-center btn-lg btn-danger button" href="home.html" style="width:67%"> HOME </a> <img
+                    src="images/dove.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="post.html" style="width:67%"> POST </a> <img
+                    src="images/jesus.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="allposts.html" style="width:67%"> ALL DEATHS
+                </a> <img src="images/skull.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="categories.html" style="width:67%"> CATEGORIES
+                </a> <img src="images/rose.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="chatroom.html" style="width:67%"> CHATROOM
+                </a>
+                <img src="images/aol.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" onclick='changeBackground()' type="button"
+                    style="width:67%"> BACKGROUND </a>
+                <img src="images/bart.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="signin.html" style="width:67%"> SIGN IN </a>
+                <img src="images/flame.gif" width="50" height="50">
+                </br>
+                <a class="btn text-center btn-lg btn-danger button" href="register.html" style="width:67%"> REGISTER
+                </a>
+                <img src="images/pray.gif" width="50" height="50">
+                
+
+            </div>
+        </div>
+
+
+        <div class="card-body">
+            <div class="card-header">
+                <h4>chatroom</h4>
+            </div>
+            <div class="card-body cardMain">
+                <h1>
+                    <img src="images/headstone.png" width="50" height="50"> Chat <img src="images/headstone.png"
+                        width="50" height="50">
+                </h1>
+                <div id="message-container">
+                    <form id="send-container">
+                        <input type="text" id="message-input">
+                        <button type="submit" id="send-button" class="btn text-centeer butt2">Send</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="script/script.js">
+
+    </script>
+</body>
+
+</html>
