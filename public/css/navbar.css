@@ -103,3 +103,7 @@ opacity: 0;
     animation: blink 1s;
     animation-iteration-count: infinite;
 }
+#local-user{
+    float:right;
+    margin-right:30px;
+}

@@ -26,6 +26,7 @@ function myFunction() {
     
         
     });    
+    $("#search-div").empty()
 };
 
 
