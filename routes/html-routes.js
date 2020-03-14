@@ -19,11 +19,17 @@ module.exports = function(app) {
 
     app.get("/signin", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/signin.html"));
-      });
+    });
 
-      app.get("/categories", function(req, res) {
+    app.get("/categories", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/categories.html"));
-      });
+    });
+
+    app.get("/welcome", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/welcome.html"));
+    });
+
+
   
-  };
+};
   

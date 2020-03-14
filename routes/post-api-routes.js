@@ -9,7 +9,7 @@ module.exports = function (app) {
   });
 
 
-  app.post('/api/allposts', function (req, res) {
+  app.post('api/posts', function (req, res) {
     req.body.UserId = 1
     req.body.image = "/image1.png"
     console.log("req.body", req.body)
@@ -40,10 +40,10 @@ module.exports = function (app) {
 
   });
 
-  app.get("/api/allposts", function (req, res) {
-    db.Post.findAll({}).then(function (postObject) {
-      res.json(postObject);
-      console.log(req.body)
-    });
-  });
+  // app.get("/api/allposts", function (req, res) {
+  //   db.Post.findAll({}).then(function (postObject) {
+  //     res.json(postObject);
+  //     console.log(req.body)
+  //   });
+  // });
 };

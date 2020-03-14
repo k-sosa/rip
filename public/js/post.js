@@ -36,8 +36,8 @@ $(document).ready(function () {
 
 
   function submitPost(post) {
-    $.post("/api/posts", post, function (object1) {
-      window.location.href = "/allposts";
+    $.post("/api/posts", post, function () {
+      window.location.href = "/api/allposts";
 
       function createPostRow(postData) {
         const newTr = $("<tr>");
