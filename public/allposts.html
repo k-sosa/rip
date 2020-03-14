@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -46,23 +47,11 @@
 
         <div class="card-body">
             <div class="card-header">
-                <h4>All Deaths Posted</h4>
+                <h4>HELP US FIND THEM or PUT THEM TO REST</h4>
             </div>
-            <div class="card-body cardMain">
-         
-                <h1>RIP POSTS</h1>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>wHO dIEd</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-
-            </div>
+            <input id="searchBar" type="text">
+            <button onclick="myFunction()"></button>
+            
         </div>
         <div>
             <h4 id="local-user"></h4>
@@ -73,6 +62,32 @@
     </script>
     <script>
         document.getElementById("local-user").innerHTML = "Welcome " + localStorage.username + "!";
+        function myFunction() {
+
+const Name = $('#searchBar').val().trim();
+
+
+  
+$.ajax({
+    url: "https://public.opendatasoft.com/api/records/1.0/search/?dataset=namus-missings&q="+Name+"&facet=cityoflastcontact&facet=countydisplaynameoflastcontact&facet=raceethnicity&facet=statedisplaynameoflastcontact&facet=gender",
+    method: "GET"
+    
+}).then(function (response) {
+    
+    const record1 = response.records[0]
+    const record2 = response.records[0].fields.cityoflastcontact
+    const record3 = response.records[0].fields.currentagefrom
+
+    console.log(record1)
+    console.log("where they were last seen " + record2)
+    console.log("their current age " + record3)
+
+    
+    
+
+});
+
+};
     </script>
 </body>
 
