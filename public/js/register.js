@@ -72,6 +72,13 @@ $(document).ready(function() {
                 window.location.replace("/allposts");
             }
             redirect();
+            const saveUser = function() {
+                localStorage.setItem("username", userName);
+                
+            }
+            const localUser = localStorage.getItem("username");
+            saveUser();
+            console.log(localUser);
         }
         
     };

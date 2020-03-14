@@ -34,10 +34,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     image: {
         type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-            isUrl: true
-        }
+        allowNull: true
+       
     },
     category: {
         type: DataTypes.STRING,

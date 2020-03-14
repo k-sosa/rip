@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>user post</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>user post</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 
 </head>
+
 <body>
+      <!---------------------------------------------------------------------------------------- POST FORM --------------------------------------------------------------->
+      <!-- <button type="sign-in" class="btn btn-signin">Sign in</button> -->
+      <div class="container" id="postBox">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Submit Content</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-example">
+                <!-------------------- TITLE -->
+                <label for="exampleTitle">What is dead?</label>
+                <input type="text" class="form-control" id="nameId" name="name" placeholder="Place dead thing in this coffin">
+              </div>
+              <!-------------------- DESCRIPTION -->
+              <div class="form-group">
+                <label for="exampleDescription">Say something about the passed</label>
+                <input type="text" class="form-control" name="quote" placeholder="Describe it">
+              </div>
+              <!-------------------- DATES -->
+              <div class="form-group">
+                <label for="Birthdate">When did it exist?</label>
+                <input type="text" class="form-control" name="birthdate" placeholder="Year of birth/creation">
+                <input type="text" class="form-control" id="deathId" name="deathdate" placeholder="Year of death">
+              </div>
+              <!-------------------- CATEGORY -->
+              <label for="Category">Category</label>
+              <select class="form-control" name="category">
+                <option>People</option>
+                <option>Fashion</option>
+                <option>Technology</option>
+                <option>Music</option>
+                <option>Memes</option>
+              </select>
+              <br>
+              <!-------------------- UPLOAD BUTTON -->
+
+
+              <input type="file" name="sampleFile" />
+
+              <br>
+
+              <!-------------------- SUBMIT BUTTON -->
+              <button onclick="myFunction()">Submit</button>
+              <p id="demo"></p>
+
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!---------------------------------------------------------------------------------------- POST FORM --------------------------------------------------------------->
+  <!------------------------------------------------------- SCRIPT FOR NAVBAR ------------------------------------------------->
+  <script src="post.js"></script>
+=======
   <a href="http://www.freelimewiredownload.net/"><img src="images/ads/games.jpg" class="games center"></a>
 <!---------------------------------------------------------------------------------------- POST FORM --------------------------------------------------------------->
 <!-- <button type="sign-in" class="btn btn-signin">Sign in</button> -->
