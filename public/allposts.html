@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
 
 </head>
 
@@ -56,10 +56,10 @@
 
             </div>
 
-            
+
         </div>
 
-        
+
         <div>
             <h4 id="local-user"></h4>
         </div>
@@ -69,35 +69,8 @@
     </script>
     <script>
         document.getElementById("local-user").innerHTML = "Welcome " + localStorage.username + "!";
-        function myFunction() {
-
-         const Name = $('#searchBar').val().trim();
 
 
-  
-$.ajax({
-    url: "https://public.opendatasoft.com/api/records/1.0/search/?dataset=namus-missings&q="+Name+"&facet=cityoflastcontact&facet=countydisplaynameoflastcontact&facet=raceethnicity&facet=statedisplaynameoflastcontact&facet=gender",
-    method: "GET"
-    
-}).then(function (response) {
-    
-    const record1 = response.records[0]
-    const record2 = response.records[0].fields.cityoflastcontact
-    const record3 = response.records[0].fields.currentagefrom
-
-    console.log(record1)
-    console.log("where they were last seen " + record2)
-    console.log("their current age " + record3)
-
-   
-    $("#search-div").append('They were last seen in ' +record2 + ' and their current age should be ' + record3 + ' Chat with others who are hoping to find someone.');
-
-    
-    
-
-});
-
-};
     </script>
 </body>
 
