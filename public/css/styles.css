@@ -677,11 +677,13 @@
 }
 .games{
     width: 72%;
-    height: 1%;
-    margin-top: 0px;
+    height: 150px;
+    margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 13%;
+    margin-left: 14%;
     position: relative;
+    animation: blink 1s;
+    animation-iteration-count: infinite;
 }
 .movies{
     width: 70%;
@@ -692,3 +694,17 @@
     position: relative;
 }
 
+@keyframes blink {
+    0% {
+opacity: 1;
+}
+49% {
+opacity: 1;
+}
+50% {
+opacity: 0;
+}
+100% {
+opacity: 0;
+}
+}
