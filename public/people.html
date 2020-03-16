@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <!---------------------------------------------------- SIDEBAR ------------------------ -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">User Page</a>
+        <a href="#">Post</a>
+        <a href="#">Death List</a>
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+    
+        <script>
+                function openNav() {
+                  document.getElementById("mySidebar").style.width = "250px";
+                  document.getElementById("main").style.marginLeft = "250px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidebar").style.width = "0";
+                  document.getElementById("main").style.marginLeft = "0";
+                }
+                </script>
+        <!---------------------------------------------- SIGN IN BUTTON -->
+    <button type="sign-in" class="btn btn-signin">Sign in</button>
+    <!------------header  -->
+    <h1>People</h1>
+    <div class="container-fluid text-center">    
+        <div class="row content">
+          <div class="col-sm-2 sidenav">
+            <p><a href="#">Link</a></p>
+            <p><a href="#">Link</a></p>
+          </div>
+          <div class="col-sm-8 text-left"> 
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <hr>
+
+            <h3>Test</h3>
+            <img src="C:\Users\efrim\OneDrive\Documents\GitHub\rip\public\Images\ads\cheats.jpg" id="sideAd1" alt="cheatAD">
+        </div>
+          <div class="col-sm-2 sidenav">
+            <div class="well">
+                <div class="container" id="ad1">
+                    <div class="card mb-4">
+                        <a href="#" class="card" style="display: inline-block">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal"></h4>
+                            </div>
+                          <div class="card-body">
+                            <img src="C:\Users\efrim\OneDrive\Documents\GitHub\rip\public\Images\ads\cheats.jpg" id="sideAd1" alt="cheatAD">
+                </div>
+                        </a>
+            
+            </div>
+            <div class="well">
+              <p>ADS</p>
+            </div>
+            <style>
+                /* Remove the navbar's default margin-bottom and rounded borders */ 
+                .navbar {
+                  margin-bottom: 0;
+                  border-radius: 0;
+                }
+                
+                /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+                .row.content {height: 450px}
+                
+                /* Set gray background color and 100% height */
+                .sidenav {
+                  padding-top: 20px;
+                  background-color: #f1f1f1;
+                  height: 100%;
+                }
+                
+                /* Set black background color, white text and some padding */
+                footer {
+                  background-color: #555;
+                  color: white;
+                  padding: 15px;
+                }
+                
+                /* On small screens, set height to 'auto' for sidenav and grid */
+                @media screen and (max-width: 767px) {
+                  .sidenav {
+                    height: auto;
+                    padding: 15px;
+                  }
+                  .row.content {height:auto;} 
+                }
+              </style>
+          </div>
+        </div>
+      </div>
+      
+
+      
+</body>
+</html>
